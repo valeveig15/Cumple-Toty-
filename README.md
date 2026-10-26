@@ -5,8 +5,8 @@ Regalo de cumpleaños para Toty, de Vale. Sitio estático adaptable a celular, s
 Abrí index.html en un navegador. Los cuatro quizzes incluyen 27 preguntas con explicación, puntuación, repetición y progreso guardado en ese navegador. La carta abre sin completar los juegos. Los quizzes literarios incluyen spoilers.
 
 ## Música
-Recomendación: BIRDS OF A FEATHER, de Billie Eilish. El botón Música permite elegir un audio local para probarlo: ese archivo no se sube ni queda guardado después de cerrar la página.
-Para incluir un MP3 que tengas autorizado a usar, guardalo en assets/birds-of-a-feather.mp3 y descomentá la línea audio.src al final de app.js. Luego subí también el MP3 al repositorio. La reproducción empieza al tocar Música; los navegadores suelen bloquear el inicio automático con sonido.
+BIRDS OF A FEATHER, de Billie Eilish, está incluida en assets/birds-of-a-feather.mp3.
+El botón Música permite reproducir y pausar la canción en bucle, con volumen inicial al 45 %. No requiere elegir un archivo. El audio empieza al tocar el botón para respetar las restricciones de reproducción de los navegadores.
 
 ## GitHub Pages
 1. Subí index.html, style.css, app.js y assets a la raíz de Cumple-Toty.
