@@ -66,3 +66,31 @@ header{height:112px;padding-inline:6%;background:#f8f3e8ed;border-bottom:1px sol
 /* Firma de Toty: inicial dibujada, sin medallón ni estrellas. */
 .brand-signature{gap:0!important;align-items:center;position:relative;text-decoration:none;min-width:135px;height:74px;color:#51654a}.brand-signature .toty-initial{width:52px;height:65px;display:block;flex-shrink:0}.brand-signature .toty-rest{font:italic 47px/1 Georgia,"Times New Roman",serif!important;letter-spacing:-2.5px;margin-left:-12px;transform:translateY(2px);color:inherit}.brand-signature:after{content:'';position:absolute;bottom:6px;left:28px;width:77px;height:7px;border-bottom:1px solid #ac8b5477;border-radius:50%;transform:rotate(-5deg)}.brand-signature:hover{color:#987448}.hero h1{font-size:clamp(78px,9vw,125px);line-height:1.05;margin:35px 0 25px}.hero>p{max-width:390px}.hero .chapter{margin-top:28px}.hero-art{top:65px}.book-subtitle{font-size:16px}.little-card{font-size:23px}
 @media(max-width:700px){.brand-signature{height:52px;min-width:108px}.brand-signature .toty-initial{height:50px;width:40px}.brand-signature .toty-rest{font-size:38px!important;margin-left:-10px}.brand-signature:after{bottom:0;left:22px;width:62px}.hero h1{font-size:clamp(70px,15vw,94px)}.hero-art{top:auto}.hero>p{font-size:16px}.little-card{font-size:20px}}
+
+/* El regalo espera a la medianoche de Uruguay. */
+#birthday-gate[hidden],#gift-root[hidden]{display:none!important}
+.birthday-locked{min-height:100svh}
+.birthday-gate{min-height:100svh;display:grid;place-items:center;padding:45px 22px;background:radial-gradient(ellipse at 50% 25%,#fdf9eeaa,transparent 70%)}
+.birthday-wait-card{position:relative;text-align:center;width:min(690px,100%);padding:40px 30px 35px;border:1px solid #9c835545;border-radius:160px 160px 14px 14px;background:linear-gradient(145deg,#fffbf1dd,#efe8d5dd);box-shadow:0 20px 65px #374b2912}
+.birthday-wait-card:before{content:'';position:absolute;inset:12px;border:1px solid #ae98612b;border-radius:150px 150px 7px 7px;pointer-events:none}
+.birthday-date{font-size:12px;letter-spacing:3px;color:#8a7144;position:relative;display:block;margin:7px 0 22px}
+.waiting-envelope{position:relative;height:112px;width:170px;margin:12px auto 27px;background:#dfccaa;border:1px solid #b69766;border-radius:4px;box-shadow:0 10px 20px #7d653014;transform:rotate(-5deg);animation:waiting-float 6s ease-in-out infinite}
+.waiting-paper{position:absolute;top:-11px;left:12px;right:12px;height:91px;padding-top:20px;background:#fff9ed;color:#867047;font:italic 26px var(--font-reading);border:1px solid #c4b18b;transform:rotate(2deg)}
+.waiting-fold{position:absolute;inset:0;background:#ddc7a0;clip-path:polygon(0 0,50% 55%,100% 0,100% 100%,0 100%)}
+.waiting-fold:after{content:'';position:absolute;inset:0;clip-path:polygon(0 100%,50% 38%,100% 100%);background:#e7d5b4}
+.waiting-seal{position:absolute;left:calc(50% - 17px);top:45px;display:grid;place-items:center;height:34px;width:34px;border:2px double #ad765b;border-radius:50%;background:#92513e;color:#e7c798;font:italic 21px Georgia;box-shadow:0 3px 7px #512d1a22}
+.birthday-kicker{font-size:10px;letter-spacing:2px;color:#7d805e}
+.birthday-gate h1{font:normal clamp(44px,6vw,64px)/1.08 var(--font-reading);letter-spacing:-2px;margin:19px 0}
+.birthday-gate h1 em{color:#987447}
+.birthday-message{font:17px/1.7 var(--font-reading);color:#616953;margin:20px auto;max-width:470px}
+.birthday-clock{display:flex;align-items:center;justify-content:center;gap:12px;margin:30px 0}
+.birthday-clock>div{display:flex;flex-direction:column;gap:10px;min-width:88px;background:#e0e6d5;border:1px solid #788c6140;border-radius:10px;padding:17px 12px 14px}
+.birthday-clock strong{font:normal 43px/1 var(--font-reading);font-variant-numeric:tabular-nums;color:#304b36}
+.birthday-clock span{font-size:12px;color:#6b755e}
+.birthday-clock>b{font:25px Georgia;color:#a78b5d;margin-bottom:24px}
+.birthday-unlock-note{font:14px/1.8 var(--font-reading);color:#7c785e;margin:25px 0 0}
+.birthday-status:empty{display:none}
+.gift-load-error{padding:20px;margin:0;background:#efe0c6;text-align:center}
+@keyframes waiting-float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-5px) rotate(-3deg)}}
+@media(max-width:600px){.birthday-gate{padding:24px 14px}.birthday-wait-card{padding:36px 16px 28px;border-radius:110px 110px 12px 12px}.birthday-wait-card:before{border-radius:100px 100px 7px 7px;inset:9px}.birthday-date{font-size:10px;margin-bottom:26px}.birthday-gate h1{font-size:45px}.birthday-message{font-size:16px}.birthday-clock{gap:6px;margin:25px 0}.birthday-clock>div{min-width:0;width:65px;padding:14px 7px 12px;gap:8px}.birthday-clock strong{font-size:32px}.birthday-clock span{font-size:10px}.birthday-clock>b{font-size:20px;margin-bottom:18px}.birthday-unlock-note{font-size:12px}.waiting-envelope{width:140px;height:95px}.waiting-seal{top:38px}.waiting-paper{height:80px;font-size:24px}}
+@media(prefers-reduced-motion:reduce){.waiting-envelope{animation:none!important}}
