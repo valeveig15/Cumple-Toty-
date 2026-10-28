@@ -50,6 +50,12 @@
       heading.focus({ preventScroll: true });
     }
     window.scrollTo(0, 0);
+    const celebration = document.createElement('script');
+    celebration.src = 'celebration.js';
+    celebration.onload = () => {
+      if (window.TotyCelebration) window.TotyCelebration.start();
+    };
+    document.body.appendChild(celebration);
   }
   function tick() {
     const remaining = getCountdown(Date.now());
