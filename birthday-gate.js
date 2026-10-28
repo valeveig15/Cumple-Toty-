@@ -3,12 +3,13 @@
   // Una sola apertura: medianoche del 30 de octubre de 2026 en Uruguay.
   const OPEN_AT = Date.parse('2026-10-30T00:00:00-03:00');
   const getCountdown = now => {
-    const total = Math.max(0, Math.ceil((OPEN_AT - now) / 1000));
+    const remainingMs = Math.max(0, Math.floor(OPEN_AT - now));
+    const total = Math.floor(remainingMs / 1000);
     return {
-      days: Math.floor(total / 86400),
-      hours: Math.floor(total % 86400 / 3600),
+      hours: Math.floor(total / 3600),
       minutes: Math.floor(total % 3600 / 60),
       seconds: total % 60,
+      milliseconds: remainingMs % 1000,
       ready: now >= OPEN_AT
     };
   };
@@ -21,7 +22,7 @@
   const template = document.getElementById('birthday-gift');
   let opened = false;
   let timer = null;
-  const cells = ['days', 'hours', 'minutes', 'seconds'];
+  const cells = ['hours', 'minutes', 'seconds', 'milliseconds'];
   function openGift() {
     if (opened) return;
     opened = true;
@@ -54,12 +55,12 @@
     const remaining = getCountdown(Date.now());
     cells.forEach(key => {
       document.getElementById('count-' + key).textContent =
-        String(remaining[key]).padStart(2, '0');
+        String(remaining[key]).padStart(key === 'milliseconds' ? 3 : 2, '0');
     });
     if (remaining.ready) openGift();
   }
   tick();
-  if (!opened) timer = setInterval(tick, 250);
+  if (!opened) timer = setInterval(tick, 16);
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden && !opened) tick();
   });
